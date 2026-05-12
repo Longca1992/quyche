@@ -39,38 +39,62 @@
 </head>
 <body class="antialiased">
 
-    <!-- Header (Đã bỏ sticky theo yêu cầu) -->
-    <header class="gradient-bg text-white card-shadow">
+    <!-- Header (Đã bỏ sticky, thêm relative z-50 cho mobile menu dropdown) -->
+    <header class="gradient-bg text-white card-shadow relative z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <div class="flex items-center space-x-3 w-full sm:w-auto justify-center sm:justify-start">
-                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-blue-600 text-2xl shrink-0">
-                    <i class="fa-solid fa-fish-fins"></i>
+            
+            <!-- Logo, Title & Hamburger Menu -->
+            <div class="flex items-center justify-between w-full sm:w-auto">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-blue-600 text-2xl shrink-0">
+                        <i class="fa-solid fa-fish-fins"></i>
+                    </div>
+                    <div class="text-left">
+                        <h1 class="text-xl sm:text-2xl font-bold uppercase tracking-wide">Hải Sản Kỳ Hà</h1>
+                        <p class="text-blue-100 text-sm"><i class="fa-solid fa-phone mr-1"></i> Hotline: 098.7777.131</p>
+                    </div>
                 </div>
-                <div class="text-center sm:text-left">
-                    <h1 class="text-xl sm:text-2xl font-bold uppercase tracking-wide">Hải Sản Kỳ Hà</h1>
-                    <p class="text-blue-100 text-sm"><i class="fa-solid fa-phone mr-1"></i> Hotline: 098.7777.131</p>
-                </div>
+                
+                <!-- Nút Hamburger Menu (Chỉ hiện trên mobile) -->
+                <button id="mobile-menu-btn" class="md:hidden text-white hover:text-blue-200 focus:outline-none p-2 text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
+
+            <!-- Address (Header) -->
             <div class="text-center sm:text-right text-sm text-blue-100 w-full sm:w-auto bg-blue-800/30 sm:bg-transparent p-2 sm:p-0 rounded-lg">
                 <p><i class="fa-solid fa-location-dot mr-1"></i> 206 Nguyễn Ngọc Nhựt, P. Phú Thọ Hoà, Tp HCM</p>
             </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white text-gray-800 shadow-xl border-t border-gray-100 z-50">
+            <nav class="flex flex-col px-4 py-2 space-y-1 font-medium text-sm max-h-[70vh] overflow-y-auto">
+                <a href="#muc-dich" class="mobile-nav-link block py-3 border-b border-gray-100 hover:text-blue-600 transition"><i class="fa-solid fa-bullseye w-6 text-center text-gray-400"></i> Mục Đích</a>
+                <a href="#phan-1" class="mobile-nav-link block py-3 border-b border-gray-100 hover:text-blue-600 transition"><i class="fa-solid fa-money-bill-wave w-6 text-center text-gray-400"></i> I. Lương & Thâm Niên</a>
+                <a href="#phan-2" class="mobile-nav-link block py-3 border-b border-gray-100 hover:text-blue-600 transition"><i class="fa-solid fa-chart-line w-6 text-center text-gray-400"></i> II. Quy Chế Sale</a>
+                <a href="#phan-3" class="mobile-nav-link block py-3 border-b border-gray-100 hover:text-blue-600 transition"><i class="fa-solid fa-boxes-stacked w-6 text-center text-gray-400"></i> III. Quy Chế Kho</a>
+                <a href="#phan-4" class="mobile-nav-link block py-3 border-b border-gray-100 hover:text-blue-600 transition"><i class="fa-solid fa-motorcycle w-6 text-center text-gray-400"></i> IV. Quy Chế Shipper</a>
+                <a href="#phan-5" class="mobile-nav-link block py-3 border-b border-gray-100 hover:text-blue-600 transition"><i class="fa-solid fa-user-check w-6 text-center text-gray-400"></i> V. Nhiệm vụ & KPI</a>
+                <a href="#phan-6" class="mobile-nav-link block py-3 hover:text-blue-600 transition"><i class="fa-solid fa-ranking-star w-6 text-center text-gray-400"></i> VI. Đánh giá & Tăng lương</a>
+            </nav>
         </div>
     </header>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 flex flex-col md:flex-row gap-6 sm:gap-8">
         
-        <!-- Sidebar Navigation -->
+        <!-- Sidebar Navigation (Chỉ hiện trên PC/Tablet) -->
         <aside class="w-full md:w-1/4 lg:w-1/5 hidden md:block">
             <div class="sticky top-6 bg-white rounded-xl p-5 card-shadow">
                 <h3 class="font-bold text-gray-800 mb-4 border-b pb-2">NỘI DUNG CHÍNH</h3>
                 <nav class="space-y-2 text-sm">
-                    <a href="#muc-dich" class="block py-1.5 text-gray-600 hover:text-blue-600 font-medium transition"><i class="fa-solid fa-bullseye w-5"></i> Mục Đích</a>
-                    <a href="#phan-1" class="block py-1.5 text-gray-600 hover:text-blue-600 font-medium transition"><i class="fa-solid fa-money-bill-wave w-5"></i> I. Lương & Thâm Niên</a>
-                    <a href="#phan-2" class="block py-1.5 text-gray-600 hover:text-blue-600 font-medium transition"><i class="fa-solid fa-chart-line w-5"></i> II. Quy Chế Sale</a>
-                    <a href="#phan-3" class="block py-1.5 text-gray-600 hover:text-blue-600 font-medium transition"><i class="fa-solid fa-boxes-stacked w-5"></i> III. Quy Chế Kho</a>
-                    <a href="#phan-4" class="block py-1.5 text-gray-600 hover:text-blue-600 font-medium transition"><i class="fa-solid fa-motorcycle w-5"></i> IV. Quy Chế Shipper</a>
-                    <a href="#phan-5" class="block py-1.5 text-gray-600 hover:text-blue-600 font-medium transition"><i class="fa-solid fa-user-check w-5"></i> V. Nhiệm vụ & KPI</a>
-                    <a href="#phan-6" class="block py-1.5 text-gray-600 hover:text-blue-600 font-medium transition"><i class="fa-solid fa-ranking-star w-5"></i> VI. Đánh giá & Tăng lương</a>
+                    <a href="#muc-dich" class="block py-1.5 text-gray-600 hover:text-blue-600 font-medium transition"><i class="fa-solid fa-bullseye w-5 text-gray-400"></i> Mục Đích</a>
+                    <a href="#phan-1" class="block py-1.5 text-gray-600 hover:text-blue-600 font-medium transition"><i class="fa-solid fa-money-bill-wave w-5 text-gray-400"></i> I. Lương & Thâm Niên</a>
+                    <a href="#phan-2" class="block py-1.5 text-gray-600 hover:text-blue-600 font-medium transition"><i class="fa-solid fa-chart-line w-5 text-gray-400"></i> II. Quy Chế Sale</a>
+                    <a href="#phan-3" class="block py-1.5 text-gray-600 hover:text-blue-600 font-medium transition"><i class="fa-solid fa-boxes-stacked w-5 text-gray-400"></i> III. Quy Chế Kho</a>
+                    <a href="#phan-4" class="block py-1.5 text-gray-600 hover:text-blue-600 font-medium transition"><i class="fa-solid fa-motorcycle w-5 text-gray-400"></i> IV. Quy Chế Shipper</a>
+                    <a href="#phan-5" class="block py-1.5 text-gray-600 hover:text-blue-600 font-medium transition"><i class="fa-solid fa-user-check w-5 text-gray-400"></i> V. Nhiệm vụ & KPI</a>
+                    <a href="#phan-6" class="block py-1.5 text-gray-600 hover:text-blue-600 font-medium transition"><i class="fa-solid fa-ranking-star w-5 text-gray-400"></i> VI. Đánh giá & Tăng lương</a>
                 </nav>
             </div>
         </aside>
@@ -80,7 +104,7 @@
             
             <div class="bg-white rounded-xl p-5 sm:p-8 card-shadow border-t-4 border-blue-500">
                 <h2 class="text-xl sm:text-3xl font-bold text-center text-gray-800 mb-2 leading-tight">QUY CHẾ LƯƠNG, THƯỞNG VÀ PHẠT</h2>
-                <p class="text-center text-xs sm:text-sm text-gray-500 italic mb-6">Ban hành và áp dụng cho toàn bộ nhân sự công ty (Tầm nhìn 2026 - 2027)</p>
+                <p class="text-center text-xs sm:text-sm text-gray-500 italic mb-6">Ban hành và áp dụng cho toàn bộ nhân sự công ty (Tầm nhìn 2024 - 2027)</p>
                 
                 <!-- Mục Đích -->
                 <section id="muc-dich" class="mb-8">
@@ -442,5 +466,25 @@
         </main>
     </div>
 
+    <!-- Script điều khiển Mobile Menu -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+            // Bật/tắt menu khi nhấn nút hamburger
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Tự động đóng menu khi chọn một mục
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
