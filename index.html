@@ -39,11 +39,10 @@
 </head>
 <body class="antialiased">
 
-    <!-- Header (Đã bỏ sticky, thêm relative z-50 cho mobile menu dropdown) -->
+    <!-- Header -->
     <header class="gradient-bg text-white card-shadow relative z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row justify-between items-center gap-4">
             
-            <!-- Logo, Title & Hamburger Menu -->
             <div class="flex items-center justify-between w-full sm:w-auto">
                 <div class="flex items-center space-x-3">
                     <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-blue-600 text-2xl shrink-0">
@@ -55,13 +54,11 @@
                     </div>
                 </div>
                 
-                <!-- Nút Hamburger Menu (Chỉ hiện trên mobile) -->
                 <button id="mobile-menu-btn" class="md:hidden text-white hover:text-blue-200 focus:outline-none p-2 text-2xl">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
 
-            <!-- Address (Header) -->
             <div class="text-center sm:text-right text-sm text-blue-100 w-full sm:w-auto bg-blue-800/30 sm:bg-transparent p-2 sm:p-0 rounded-lg">
                 <p><i class="fa-solid fa-location-dot mr-1"></i> 206 Nguyễn Ngọc Nhựt, P. Phú Thọ Hoà, Tp HCM</p>
             </div>
@@ -83,7 +80,7 @@
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 flex flex-col md:flex-row gap-6 sm:gap-8">
         
-        <!-- Sidebar Navigation (Chỉ hiện trên PC/Tablet) -->
+        <!-- Sidebar Navigation -->
         <aside class="w-full md:w-1/4 lg:w-1/5 hidden md:block">
             <div class="sticky top-6 bg-white rounded-xl p-5 card-shadow">
                 <h3 class="font-bold text-gray-800 mb-4 border-b pb-2">NỘI DUNG CHÍNH</h3>
@@ -146,10 +143,11 @@
                         </div>
 
                         <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
-                            <p class="font-semibold text-gray-800">2. Phụ cấp cơ bản</p>
+                            <p class="font-semibold text-gray-800">2. Phụ cấp cơ bản & Phúc lợi</p>
                             <ul class="text-sm text-gray-700 mt-3 space-y-2">
                                 <li class="bg-white p-2.5 rounded shadow-sm flex items-start sm:items-center"><i class="fa-solid fa-utensils w-5 text-orange-500 mt-0.5 sm:mt-0 mr-2"></i> <span>Cơm: <strong>500.000đ</strong>/tháng (Theo ngày công)</span></li>
-                                <li class="bg-white p-2.5 rounded shadow-sm flex items-start sm:items-center"><i class="fa-solid fa-medal w-5 text-yellow-500 mt-0.5 sm:mt-0 mr-2"></i> <span>Chuyên cần: <strong>300.000đ</strong>/tháng</span></li>
+                                <li class="bg-white p-2.5 rounded shadow-sm flex items-start sm:items-center"><i class="fa-solid fa-medal w-5 text-yellow-500 mt-0.5 sm:mt-0 mr-2"></i> <span>Chuyên cần: <strong>200.000đ</strong>/tháng</span></li>
+                                <li class="bg-white p-2.5 rounded shadow-sm flex items-start sm:items-center border border-pink-100"><i class="fa-solid fa-cake-candles w-5 text-pink-500 mt-0.5 sm:mt-0 mr-2"></i> <span>Sinh nhật: Thưởng <strong>300.000đ</strong></span></li>
                             </ul>
                         </div>
                     </div>
@@ -167,11 +165,11 @@
                                 </li>
                                 <li class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b pb-2 gap-1 pt-1">
                                     <span>Gắn bó từ <strong>5 năm - dưới 7 năm</strong>:</span>
-                                    <span class="font-bold text-indigo-600 text-base">+ 1.500.000đ / tháng</span>
+                                    <span class="font-bold text-indigo-600 text-base">+ 1.000.000đ / tháng</span>
                                 </li>
                                 <li class="flex flex-col sm:flex-row justify-between items-start sm:items-center pt-1 gap-1">
-                                    <span>Gắn bó từ <strong>7 năm - 10 năm</strong>:</span>
-                                    <span class="font-black text-indigo-700 text-lg">+ 2.000.000đ / tháng</span>
+                                    <span>Gắn bó <strong>trên 7 năm</strong>:</span>
+                                    <span class="font-black text-indigo-700 text-lg">+ 1.500.000đ / tháng</span>
                                 </li>
                             </ul>
                         </div>
@@ -259,10 +257,11 @@
 
                     <div class="mt-4 text-sm text-gray-700 bg-red-50 p-4 rounded-lg border border-red-100">
                         <p class="font-bold text-red-800 mb-2"><i class="fa-solid fa-triangle-exclamation"></i> Khung Phạt (Khấu trừ vào thưởng)</p>
-                        <ul class="list-disc pl-5 space-y-1.5">
+                        <ul class="list-disc pl-5 space-y-2">
                             <li>Tư vấn sai giá/CTKM: Phạt 50.000đ/lần (Tự bù chênh lệch).</li>
-                            <li>Lên nhầm bill (Sai mã, sai số lượng): Phạt 50.000đ/lần.</li>
+                            <li><span class="font-semibold text-red-700">Soạn sai / Nhầm bill:</span> Phạt <strong>50.000đ</strong> (Đồng thời nhân viên phải tự xử lý hậu quả, VD: tự bỏ tiền book xe giao lại cho khách).</li>
                             <li>Khách phàn nàn thái độ kém: Phạt 100.000đ/lần.</li>
+                            <li><strong>Quên tắt điện WC:</strong> Phạt <strong>10.000đ/lần</strong> (Quy định áp dụng chung cho toàn bộ nhân viên).</li>
                         </ul>
                     </div>
                 </section>
@@ -278,12 +277,30 @@
                             <h4 class="font-bold text-gray-800 mb-2">1. Quỹ Thưởng KPI Cơ Bản</h4>
                             <p class="text-xl sm:text-2xl font-bold text-orange-500 mb-2">1.000.000đ <span class="text-xs sm:text-sm font-normal text-gray-500">/tháng</span></p>
                             <p class="text-xs text-gray-600 mb-3">Sẽ bị trừ dần vào quỹ nếu mắc lỗi:</p>
-                            <ul class="text-[13px] text-gray-700 space-y-2">
-                                <li class="flex justify-between items-start gap-2 border-b border-gray-100 pb-1"><span>Hàng xì gửi cho khách:</span> <span class="text-red-500 font-bold whitespace-nowrap">-100k</span></li>
-                                <li class="flex justify-between items-start gap-2 border-b border-gray-100 pb-1"><span>Soạn sai/nhầm bill:</span> <span class="text-red-500 font-bold whitespace-nowrap">-50k</span></li>
-                                <li class="flex justify-between items-start gap-2 border-b border-gray-100 pb-1"><span>Làm hỏng hàng:</span> <span class="text-red-500 font-bold whitespace-nowrap text-right">100% Giá Trị</span></li>
-                                <li class="flex justify-between items-start gap-2 border-b border-gray-100 pb-1"><span>Quên tắt điện kho:</span> <span class="text-red-500 font-bold whitespace-nowrap">-200k/lần</span></li>
-                                <li class="flex justify-between items-start gap-2 pb-1"><span>Quên tắt điện WC:</span> <span class="text-red-500 font-bold whitespace-nowrap">-10k/lần</span></li>
+                            <ul class="text-[13px] text-gray-700 space-y-2.5">
+                                <li class="flex justify-between items-start gap-2 border-b border-gray-100 pb-1.5">
+                                    <span>Hàng xì gửi cho khách:</span> 
+                                    <span class="text-red-500 font-bold whitespace-nowrap">-100k</span>
+                                </li>
+                                <li class="flex flex-col sm:flex-row justify-between items-start gap-1 sm:gap-2 border-b border-gray-100 pb-1.5">
+                                    <span>Soạn sai / Nhầm bill:</span> 
+                                    <div class="text-left sm:text-right">
+                                        <span class="text-red-500 font-bold whitespace-nowrap">-50k</span>
+                                        <p class="text-[10px] text-gray-500">(Tự xử lý hậu quả: tự book xe...)</p>
+                                    </div>
+                                </li>
+                                <li class="flex flex-col sm:flex-row justify-between items-start gap-1 sm:gap-2 border-b border-gray-100 pb-1.5">
+                                    <span>Làm hỏng hàng:</span> 
+                                    <span class="text-red-500 font-bold text-left sm:text-right leading-tight">100% giá trị hàng<br><span class="text-[10px] font-normal text-gray-500">(Tính ngay thời điểm đó)</span></span>
+                                </li>
+                                <li class="flex justify-between items-start gap-2 border-b border-gray-100 pb-1.5">
+                                    <span>Quên tắt điện kho:</span> 
+                                    <span class="text-red-500 font-bold whitespace-nowrap">-100k / lần</span>
+                                </li>
+                                <li class="flex justify-between items-start gap-2">
+                                    <span>Quên tắt điện WC:</span> 
+                                    <span class="text-red-500 font-bold whitespace-nowrap">-10k / lần <span class="text-[10px] font-normal text-gray-500">(Áp dụng chung)</span></span>
+                                </li>
                             </ul>
                         </div>
 
@@ -320,15 +337,15 @@
                             <div class="space-y-2 text-[13px] sm:text-sm">
                                 <div class="flex justify-between items-center bg-white p-2.5 rounded shadow-sm gap-2">
                                     <span class="leading-tight">Đạt <strong>300 đơn</strong> / tháng</span>
-                                    <span class="font-bold text-amber-600 whitespace-nowrap">+ 1.000.000đ</span>
+                                    <span class="font-bold text-amber-600 whitespace-nowrap">+ 700.000đ</span>
                                 </div>
                                 <div class="flex justify-between items-center bg-white p-2.5 rounded shadow-sm gap-2">
                                     <span class="leading-tight">Đạt <strong>400 đơn</strong> / tháng</span>
-                                    <span class="font-bold text-amber-600 whitespace-nowrap">+ 2.000.000đ</span>
+                                    <span class="font-bold text-amber-600 whitespace-nowrap">+ 1.200.000đ</span>
                                 </div>
                                 <div class="flex justify-between items-center bg-white p-2.5 rounded shadow-sm border border-amber-300 gap-2">
                                     <span class="leading-tight text-amber-900">Đạt <strong>500 đơn</strong> / tháng</span>
-                                    <span class="font-bold text-amber-600 text-base sm:text-lg whitespace-nowrap">+ 3.000.000đ</span>
+                                    <span class="font-bold text-amber-600 text-base sm:text-lg whitespace-nowrap">+ 1.700.000đ</span>
                                 </div>
                             </div>
                         </div>
@@ -338,8 +355,9 @@
                         <h4 class="font-bold text-red-800 mb-2"><i class="fa-solid fa-gavel mr-1"></i> Trách nhiệm & Chế tài</h4>
                         <ul class="list-disc pl-5 space-y-2 leading-relaxed">
                             <li><span class="font-semibold text-red-600">Phạt lười biếng:</span> Từ chối giao đơn hàng nằm trong tuyến/giờ làm việc không lý do chính đáng, buộc công ty phải book xe ngoài ➔ <strong>Phạt 50.000đ/lần</strong>.</li>
-                            <li>Làm thất thoát, rách vỡ hàng hóa trong quá trình vận chuyển ➔ Đền 100% giá trị gốc.</li>
+                            <li>Làm thất thoát, rách vỡ hàng hóa trong quá trình vận chuyển ➔ <strong>Đền 100% giá trị hàng ngay thời điểm đó</strong>.</li>
                             <li>Giao trễ giờ làm khách phàn nàn/trả hàng ➔ Không tính tiền đơn đó.</li>
+                            <li><strong>Quên tắt điện WC:</strong> Phạt <strong>10.000đ/lần</strong> (Quy định áp dụng chung cho toàn bộ nhân viên).</li>
                         </ul>
                     </div>
                 </section>
@@ -473,12 +491,10 @@
             const mobileMenu = document.getElementById('mobile-menu');
             const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
-            // Bật/tắt menu khi nhấn nút hamburger
             mobileMenuBtn.addEventListener('click', function() {
                 mobileMenu.classList.toggle('hidden');
             });
 
-            // Tự động đóng menu khi chọn một mục
             mobileNavLinks.forEach(link => {
                 link.addEventListener('click', function() {
                     mobileMenu.classList.add('hidden');
